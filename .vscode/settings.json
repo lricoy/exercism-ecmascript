@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.fontSize": 15,
+
+    "extensions.autoUpdate": false,
+
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.tabWidth": 4
+}
