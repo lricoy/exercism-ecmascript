@@ -1,5 +1,5 @@
 import Triangle from './pascals-triangle';
-
+import { zip } from './pascals-triangle';
 describe('Triangle', () => {
   test('with one row', () => {
     expect(new Triangle(1).rows).toEqual([[1]]);
@@ -26,3 +26,18 @@ describe('Triangle', () => {
     expect(new Triangle(20).lastRow).toEqual(twentieth);
   });
 });
+
+describe('zip', () => {
+  test('it should return a empty array if no arguments provided', () => {
+    expect(zip()).toEqual([]);
+  });
+  test('it should work when given only one array', () => {
+    expect(zip([1,2,3])).toEqual([[1], [2], [3]]);
+  });
+  test('it should work with two arrays', () => {
+    expect(zip([1,2,3], [4,5,6])).toEqual([[1,4], [2,5], [3,6]]);
+  });
+  test('it should work with two arrays of one and zero', () => {
+    expect(zip([0, 1], [1, 0])).toEqual([[0, 1], [1, 0]]);
+  });
+})
